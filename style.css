@@ -32,7 +32,7 @@ body {
 #baraban {
 	background: url("images/baraban.png") no-repeat;
 	position: absolute;
- left: calc(50% - 60px);
+    left: calc(50% - 60px);
 	top: 0;
 	width: 120px;
 	height: 125px;
@@ -106,15 +106,15 @@ body {
 	background: url("images/blood.png") no-repeat;
     width: 242px;
     height: 230px;
-    position: absolute;
+    position: relative;
     z-index: -99;
 }
 #blood.player1 {
-	top: 20px;
+	top: -81px;
     left: -53px;
 }
 #blood.player2 {
-	top: 20px;
+	top: -81px;
     left: -34px;
     transform: scale(-1, 1);
 }
