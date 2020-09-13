@@ -106,7 +106,7 @@ body {
 	background: url("images/blood.png") no-repeat;
     width: 242px;
     height: 230px;
-    position: relative;
+    position: absolute;
     z-index: -99;
 }
 #blood.player1 {
