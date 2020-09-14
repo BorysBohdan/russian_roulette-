@@ -1,5 +1,5 @@
 var countShot = 0
-var bulletPosition = random(1,6);
+var bulletPosition = random(1,7);
 var btnShot = document.querySelector("#shot");
 var currentPlayer = 1;
 var baraban = document.querySelector("#baraban");
@@ -61,7 +61,7 @@ function shot() {
 		var blood = document.createElement("div");
 			blood.id ="blood";
 		var player = document.querySelector("#player"+currentPlayer);
-			player.appendChild(blood);
+		player.appendChild(blood);
 		setTimeout(endGame,35);
 		
 	} else{
