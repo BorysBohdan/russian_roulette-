@@ -105,17 +105,15 @@ body {
 #blood {
 	background: url("images/blood.png") no-repeat;
     width: 242px;
-	top: -81px;
-    left: -53px;
     height: 230px;
     position: absolute;
     z-index: -99;
 }
-#blood.player1 {
+#player1 #blood  {
 	top: -81px;
     left: -53px;
 }
-#blood.player2 {
+#player2 #blood  {
 	top: -81px;
     left: -34px;
     transform: scale(-1, 1);
