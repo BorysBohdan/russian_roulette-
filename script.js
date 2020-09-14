@@ -18,7 +18,10 @@ function start(){
 	btnShot.onclick = "";
 	
 	
-	var rotate = 0;
+	var rotate = 0;
+	var audio_rotate = new Audio(); 
+	 audio_rotate.src = "audio/baraban-rotate.mp3"; 
+	 audio_rotate.play(); 
 	var timer = setInterval(function() {
 	 rotate = rotate + 10;
 		baraban.style.transform = "rotate( "+rotate+"deg)";
@@ -31,28 +34,37 @@ function start(){
 			btnShot.onclick = shot;
 
 			btnShot.className = ""
-	
+			audio_rotate.pause()
 } 
-			}, 50)
+			}
+, 50);
+	
+
 
 }
 
 function random(min,max) {
 	return Math.floor( Math.random() * (max - min) + min );
 }
+
+function sound(way) {
+	 var audio = new Audio(); 
+	 audio.src = way; 
+	 audio.play(); 
+}
+
 var rotateBaraban = 0;
 function shot() {
 	countShot = countShot + 1;
-
-	if(bulletPosition== countShot){
+	if(bulletPosition == countShot){
+		sound("audio/revolver-shot.mp3")
 		var blood = document.createElement("div");
-			blood.id="blood";
+			blood.id ="blood";
 		var player = document.querySelector("#player"+currentPlayer);
-		console.log(player);
 			player.appendChild(blood);
-		endGame();
+		setTimeout(endGame,35);
+		
 	} else{
-
 		if(currentPlayer == 1){
 			rotationRight();
 			currentPlayer = 2;
@@ -62,7 +74,7 @@ function shot() {
 		}
 		rotateBaraban = rotateBaraban + 60;
 		var rotate = rotateBaraban
-
+		
 		var timer = setInterval(function(){
 			rotate = rotate + 10;
 			if(rotate == rotateBaraban+60){
@@ -71,6 +83,7 @@ function shot() {
 			}
 			baraban.style.transform ="rotate("+rotate+"deg)";
 		},10)
+		sound("audio/revolver-shot-not-bullet.mp3")
 		
 	}
 }

@@ -105,6 +105,8 @@ body {
 #blood {
 	background: url("images/blood.png") no-repeat;
     width: 242px;
+	top: -81px;
+    left: -53px;
     height: 230px;
     position: absolute;
     z-index: -99;
